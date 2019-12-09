@@ -1,0 +1,37 @@
+<html>
+  <head>
+  <style> body { margin: 0; } #drop_zone {
+  border: 5px solid gray;
+  width:  200px;
+  height: 100px;
+} </style>
+
+  <script src="//aframe.io/releases/0.9.2/aframe.min.js"></script>
+  <script src="//unpkg.com/ar.js/aframe/build/aframe-ar.min.js"></script>
+
+  <script src="//unpkg.com/3d-force-graph-ar"></script>
+  <!--<script src="../../src/packages/react-force-graph-vr/dist/react-force-graph-vr.js"></script>-->
+
+ 
+</head>
+
+<body>
+  <div id="graph"></div>
+  
+
+  <script>
+const Graph = ForceGraphAR()
+      (document.getElementById('graph'))
+        .jsonUrl('./graph.json')
+        .linkWidth(3)
+        .nodeOpacity(0.9)
+        .linkOpacity(0.4)
+        .nodeColor(() => 'firebrick')
+        .linkColor(() => 'darkgrey');
+
+    
+    
+
+  </script>
+</body>
+</html>
